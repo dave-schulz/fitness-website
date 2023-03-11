@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
-import Home from "@/components/home";
-import Navbar from "@/components/navbar";
+import { useEffect, useState } from 'react';
+import Home from '@/components/home';
+import Benefits from '@/components/benefits';
+import Classes from '@/components/classes';
+import Navbar from '@/components/navbar';
 
-import { SelectedPage } from "@/enums/types";
+import { SelectedPage } from '@/enums/types';
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-    SelectedPage.Home
+    SelectedPage.Home,
   );
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
@@ -20,8 +22,8 @@ const App = () => {
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -32,6 +34,8 @@ const App = () => {
         setSelectedPage={setSelectedPage}
       />
       <Home setSelectedPage={setSelectedPage} />
+      <Benefits setSelectedPage={setSelectedPage} />
+      <Classes setSelectedPage={setSelectedPage} />
     </div>
   );
 };

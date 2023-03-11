@@ -1,6 +1,6 @@
-import { SelectedPage } from "@/enums/types";
-import React from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { SelectedPage } from '@/enums/types';
+import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 type Props = {
   children: React.ReactNode;

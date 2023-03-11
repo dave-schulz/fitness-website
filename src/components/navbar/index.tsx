@@ -6,7 +6,7 @@ import { SelectedPage } from "@/enums/types";
 import Link from "./Link";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
-import ActionButton from "@/components/ActionButton";
+import ActionButton from "@/components/actionButton";
 
 type Props = {
   isTopOfPage: boolean;
